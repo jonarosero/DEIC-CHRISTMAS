@@ -5,7 +5,7 @@
 
 /* Wallpaper */
 body {
-  background-color: #928A97;
+  background-color: #928a97;
   background-image: url("https://images.pexels.com/photos/257909/pexels-photo-257909.jpeg?fit=crop&w=1920&h=1280");
   background-repeat: no-repeat;
   background-size: cover;
@@ -102,14 +102,14 @@ body {
 }
 @media (max-width: 767px) {
   .card,
-.card-page {
+  .card-page {
     width: 230px;
     height: 329px;
   }
 }
 @media (max-width: 479px) {
   .card,
-.card-page {
+  .card-page {
     width: 150px;
     height: 214px;
   }
@@ -138,7 +138,9 @@ body {
 /* Exterior de la carta */
 .cart-page-outside {
   border: 10px solid #fbfbfb;
-  background: #c72320 url("https://www.dropbox.com/s/xsgg2exs2oparkm/front-bg.png?raw=1") no-repeat center;
+  background: #c72320
+    url("https://www.dropbox.com/s/xsgg2exs2oparkm/front-bg.png?raw=1")
+    no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -153,8 +155,8 @@ body {
 .cart-page-inside,
 .cart-page-bottom {
   background-color: #d4d1d0;
-  background-image: url("https://www.dropbox.com/s/8hw7guch8d151kg/pattern.png?raw=1");
-  border: 20px solid #d4d1d0;
+  background-image: url("https://i.ibb.co/pJVxBry/Frame-1-1.png");
+  border: 10px solid #f5e0a3;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -176,7 +178,7 @@ body {
 }
 @media (max-width: 767px) {
   .cart-page-inside,
-.cart-page-bottom {
+  .cart-page-bottom {
     border: 10px solid #d4d1d0;
   }
 }
@@ -293,4 +295,117 @@ p {
   p {
     font-size: 20px;
   }
+}
+
+/* Arbol navideño */
+.tree {
+  position: relative;
+  height: 50vmin;
+  width: 25vmin;
+  transform-style: preserve-3d;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+.tree__light {
+  transform-style: preserve-3d;
+  position: absolute;
+  height: 1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  -webkit-animation: flash calc(var(--speed) * 1s) calc(var(--delay) * 1s)
+      infinite steps(4),
+    appear 0.5s calc(var(--appear) * 0.05s) both;
+  animation: flash calc(var(--speed) * 1s) calc(var(--delay) * 1s) infinite
+      steps(4),
+    appear 0.5s calc(var(--appear) * 0.05s) both;
+  left: 50%;
+  transform: translate(-50%, 50%) rotateY(calc(var(--rotate, 0) * 1deg))
+    translate3d(0, 0, calc(var(--radius, 0) * 1vmin));
+  bottom: calc(var(--y, 0) * 1%);
+}
+.tree__star {
+  stroke-width: 5vmin;
+  stroke: #f5e0a3;
+  filter: drop-shadow(0 0 2vmin #fcf1cf);
+  height: 5vmin;
+  width: 5vmin;
+  overflow: visible !important;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  stroke-dasharray: 1000 1000;
+  fill: none;
+  -webkit-animation: stroke 1s calc((var(--delay) * 0.95) * 0.05s) both;
+  animation: stroke 1s calc((var(--delay) * 0.95) * 0.05s) both;
+}
+@-webkit-keyframes stroke {
+  from {
+    stroke-dashoffset: -1000;
+  }
+}
+@keyframes stroke {
+  from {
+    stroke-dashoffset: -1000;
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes flash {
+  0%,
+  100% {
+    background: #f00;
+  }
+  20% {
+    background: #fff;
+  }
+  40% {
+    background: #f00;
+  }
+  60% {
+    background: #fff;
+  }
+  80% {
+    background: #f00;
+  }
+}
+@keyframes flash {
+  0%,
+  100% {
+    background: #f00;
+  }
+  20% {
+    background: #fff;
+  }
+  40% {
+    background: #f00;
+  }
+  60% {
+    background: #fff;
+  }
+  80% {
+    background: #f00;
+  }
+}
+
+.cart-page-inside {
+  background: #233343;
 }
