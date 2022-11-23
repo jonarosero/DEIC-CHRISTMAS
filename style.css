@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Mirza&amp;subset=latin-ext");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -275,7 +277,7 @@ body {
   }
 }
 p {
-  font-family: "Poppin", Verdana, Arial, serif;
+  font-family: 'Nunito', sans-serif;
   color: #00613C;
   font-size: 15px;
   line-height: 1.2em;
